@@ -42,7 +42,7 @@ npm start
 
 ## Gallery Filters
 
-The website features a gallery section with filters for date and occasion. These filters are managed using Redux. The actions and reducers are located in the `src/store` directory.
+The website features a gallery section with filters for date and occasion.
 
 
 ## Components
