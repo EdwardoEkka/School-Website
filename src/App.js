@@ -10,6 +10,7 @@ import GalleryPage from "./pages/gallery/gallery";
 import AcademicsPage from "./pages/academics/academics";
 import Navbar from "./components/navbar";
 import GalleryView from "./pages/gallery_view/gallery_view";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<ContactUsPage />}></Route>
           <Route path="/gallery_view" element={<GalleryView />}></Route>
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
