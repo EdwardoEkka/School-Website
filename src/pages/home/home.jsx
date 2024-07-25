@@ -154,7 +154,7 @@ const Homepage = () => {
               <img
                 src={facility.image}
                 alt={facility.title}
-                className="rounded-lg shadow-lg mb-4 max-w-[600px] sm:h-[400px] h-[300px]"
+                className="rounded-lg shadow-lg mb-4 max-w-[600px] sm:h-[400px] h-[300px] object-cover"
               />
               <h3 className="text-xl font-bold mb-2">{facility.title}</h3>
               <p className="text-gray-700 text-center">{facility.description}</p>

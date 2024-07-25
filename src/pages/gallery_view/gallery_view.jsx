@@ -1,6 +1,6 @@
 import React from "react";
 import allGalleryData from "../../data/gallery_data";
-import GalleryCard from "../gallery/components/gallery_card";
+import PhotoViewCard from "./components/photo_view";
 
 const GalleryView = () => {
   const currentPageUrl = window.location.href;
@@ -21,10 +21,11 @@ const GalleryView = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100">
+      <p className="text-2xl text-center">{occasion} {year}</p>
       <div className="max-w-6xl flex flex-wrap md:justify-around justify-center">
         {filteredData.length > 0 ? (
           filteredData.map((item, index) => (
-            <GalleryCard key={index} data={item} />
+            <PhotoViewCard key={index} data={item} />
           ))
         ) : (
           <p>No items match your criteria.</p>

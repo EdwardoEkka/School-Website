@@ -1,14 +1,8 @@
 import React from "react";
 import FacultyCard from "./components/faculty_card";
-
+import teachers from "../../data/teachers_data";
 const FacultyPage = () => {
-  const facultyData = {
-    name: 'Michael Brown',
-    subject: 'Mathematics',
-    qualification: 'M.Sc. in Mathematics',
-    experience: '8 years of teaching experience',
-    picture: 'https://www.thoughtco.com/thmb/MHUBZtFmviuUYiOwRU_jrA9qYw0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/480811293-56a939853df78cf772a4ecb8.jpg' // Replace with actual image URL
-};
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 items-center">
       <div className="flex flex-col md:flex-row container p-3 max-w-6xl">
@@ -32,18 +26,9 @@ const FacultyPage = () => {
         </div>
       </div>
       <div className="max-w-6xl flex flex-wrap md:justify-around justify-center">
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
-        <FacultyCard data={facultyData}/>
+       {teachers.map((item, index)=>(
+        <FacultyCard data={item}/>
+       ))}
       </div>
     </div>
   );

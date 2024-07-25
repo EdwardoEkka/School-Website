@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { navselect } from '../store/actions/navActions';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navId = useSelector((state) => state.nav.selectedLink);
+
+  const DispatchNav = (nav) => {
+    dispatch(navselect(nav));
+  };
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   const navItems = [
-    { id: 1, text: 'Home', path: '/home' },
+    { id: 1, text: 'Home', path: '/' },
     { id: 2, text: 'Admissions', path: '/admissions' },
     { id: 3, text: 'Academics', path: '/academics' },
     { id: 4, text: 'Faculty', path: '/faculty' },
@@ -28,9 +36,12 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className='p-3 hover:bg-[#00df9a] rounded-xl m-1 cursor-pointer duration-300 hover:text-black'
+            className={`p-3 rounded-xl m-1 cursor-pointer duration-300 ${
+              navId === item.id ? 'bg-[#00df9a] text-black' : 'hover:bg-[#00df9a] hover:text-black'
+            }`}
             onClick={() => {
               navigate(item.path);
+              DispatchNav(item.id);
             }}
           >
             {item.text}
@@ -51,9 +62,12 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className='p-4 hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
+            className={`p-4 cursor-pointer border-gray-600 duration-300 ${
+              navId === item.id ? 'bg-[#00df9a] text-black' : 'hover:bg-[#00df9a] hover:text-black'
+            }`}
             onClick={() => {
               navigate(item.path);
+              DispatchNav(item.id);
             }}
           >
             {item.text}

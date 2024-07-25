@@ -2,8 +2,7 @@ import React from "react";
 
 const ContactUsPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 sm:p-6 p-2">
-      <h1 className="text-4xl font-bold text-blue-500 mb-6">Contact Us</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 sm:p-6 p-2 mt-5">
 
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl">
         <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
@@ -21,7 +20,7 @@ const ContactUsPage = () => {
         
         <div className="mb-4">
           <p className="text-lg font-medium">Email:</p>
-          <p>info@schoolname.edu</p>
+          <p>info@stjohnsschool.edu</p>
         </div>
 
         <h2 className="text-2xl font-semibold mb-4">Send Us a Message</h2>
