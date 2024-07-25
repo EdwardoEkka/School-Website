@@ -101,7 +101,7 @@ const AboutUsPage = () => {
             </div>
             <div className="rounder-sm md:w-1/2 w-full">
               <img
-                src="https://images.jdmagicbox.com/quickquotes/listicle/dp-contract-img-glry_1718199202610_t4727_1116x718.jpg"
+                src="https://www.redschoolchk.in/downloads/nimages/webpics/sr-wing.jpg"
                 alt="history"
                 className="rounded"
               ></img>

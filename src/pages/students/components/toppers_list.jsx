@@ -3,7 +3,7 @@ import allToppersData from "../../../data/toppers_data";
 import ToppersCard from "./toppers_card";
 
 const ToppersList = () => {
-  const [selectedYear, setSelectedYear] = useState("2021");
+  const [selectedYear, setSelectedYear] = useState("2024");
 
   // Function to filter toppers based on class and year
   const filterToppers = (className) => {
@@ -25,9 +25,8 @@ const ToppersList = () => {
           onChange={(e) => setSelectedYear(e.target.value)}
           className="border rounded p-1"
         >
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          {/* Add more years as needed */}
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
         </select>
       </div>
 
