@@ -1,5 +1,3 @@
-Sure, here's an example of a markdown file (README.md) for your school website project that uses Tailwind CSS and Redux for state management:
-
 # St John's School Website
 
 This is the official website for St John's School, built using React, Tailwind CSS, and Redux.
